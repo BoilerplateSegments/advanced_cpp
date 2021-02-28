@@ -5,6 +5,11 @@
  * TODO: rewrite macros with generic or templates?
  */
 
+#include <iostream>
+#include <numeric>
+#include <vector>
+#include <algorithm>
+
 // View and reset
 #define RESET_PRINT(S, VEC)                                                   \
   std::cout << S << ": \n";                                                   \
@@ -18,9 +23,6 @@
 
 #define VIEW(S) RESET_PRINT (S, vec)
 
-#include <iostream>
-#include <numeric>
-#include <vector>
 
 int
 main ()
