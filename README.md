@@ -1,12 +1,15 @@
-# Some fun with `advanced` C++++
+# C++ but with superior taste and idiosyncrasy
 
-This repo is to gain some momentum toward idiomatic c++...
+The code here must follow the [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines) and every thing must be as elegant as possible.
 
-The code here must follow the [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines)
-
-> What do u mean by `advanced`? 
-> > Well, it means they are not recommends to use in "production" without enough understanding:)
+> Current reading: C++ Crash Course by Josh Lospinoso -> a good book that throw away old warts.
 
 # Additional links
 
 * `.clang-format` -> https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+
+# Readings
+
+## Encyclopedia
+
++ <https://www.learncpp.com>
