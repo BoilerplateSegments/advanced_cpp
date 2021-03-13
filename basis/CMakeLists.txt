@@ -1,13 +1,10 @@
 project(template)
 
-add_executable(oop_basis oop_basis.cpp)
-
-add_executable(composing_maps composing_maps.cpp)
-
-add_executable(filesystem_basis filesystem_basis.cpp)
-
-add_executable(lambda_basis lambda_basis.cpp)
-
-add_executable(template_basis template_basis.cpp)
-
-add_executable(higher_order_functions_basis recrusive_sum_basis.cpp)
+add_executable(1 01_composing_maps.cpp)
+add_executable(2 02_lambda_basis.cpp)
+add_executable(3 03_filesystem_basis.cpp)
+add_executable(4 04_oop_basis.cpp)
+add_executable(5 05_template_basis.cpp)
+add_executable(6 06_recrusive_sum_basis.cpp)
+add_executable(7 07_no_command_pattern_by_function_ptr.cpp)
+add_executable(8 08_closure_struct.cpp)
