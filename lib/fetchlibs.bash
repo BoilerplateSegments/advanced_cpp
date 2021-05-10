@@ -1,3 +1,3 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 git clone --depth 1 https://github.com/google/googletest/
