@@ -1,4 +1,7 @@
 # Project exclude paths
 /cmake-build-debug/
+/basis_decoupled/cmake-build-debug/
 /.idea/
 /lib/**
+
+/basis_decoupled/doctest.h

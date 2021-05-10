@@ -3,6 +3,10 @@
 
 using namespace std;
 
+int newslbplus(int x, int y) {
+  cout<<"nce";
+  return x+y; }
+
 struct counter{
   // If we construct a counter, a private char x would be
   // live with object counter.
@@ -23,11 +27,11 @@ private:
   const char x;
 };
 
-int main(){
-
-  // A counter that only count s
-  counter s_counter('s');
-  cout<<s_counter("abcsssss123 ")<<endl;
-
-  return 0;
-}
+//int main(){
+//
+//  // A counter that only count s
+//  counter s_counter('s');
+//  cout<<s_counter("abcsssss123 ")<<endl;
+//
+//  return 0;
+//}
