@@ -24,13 +24,20 @@ foreach(SRC ${SRC_FILES})
     get_filename_component(BARE_NAME ${SRC} NAME_WE)  # CMAKE 3.14 feature
 
     if(EXISTS "${PROJECT_SOURCE_DIR}/${BARE_NAME}_test.cpp")
-        message("${PROJECT_SOURCE_DIR}/${BARE_NAME}_test.cpp")
+        # message("${PROJECT_SOURCE_DIR}/${BARE_NAME}_test.cpp")
 
-        set(SRC_LIST "${BARE_NAME}_test.cpp"
-                      doctest.h)
-        message(${SRC_LIST})
+        if(EXISTS "${PROJECT_SOURCE_DIR}/${BARE_NAME}.h")
+            set(SRC_LIST "${BARE_NAME}_test.cpp"
+                         "${BARE_NAME}.cpp"
+                         "${BARE_NAME}.h"
+                           doctest.h)
+        else()
+            set(SRC_LIST "${BARE_NAME}_test.cpp"
+                          doctest.h)
+        endif()
+        # message(${SRC_LIST})
         add_executable(${BARE_NAME} ${SRC_LIST})
-        add_test(NAME ${BARE_NAME} COMMAND ${BARE_NAME})
+        #add_test(NAME ${BARE_NAME} COMMAND ${BARE_NAME})
     else()
         add_executable(${BARE_NAME} ${SRC})
     endif()
