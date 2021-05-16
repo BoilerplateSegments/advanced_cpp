@@ -1,0 +1,3 @@
+[submodule "alternative_std/slb_abseil/abseil-cpp"]
+	path = alternative_std/slb_abseil/abseil-cpp
+	url = git@github.com:abseil/abseil-cpp.git

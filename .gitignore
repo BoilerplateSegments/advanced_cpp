@@ -1,7 +1,6 @@
 # Project exclude paths
-/cmake-build-debug/
-/basis_decoupled/cmake-build-debug/
-/basis_done_right/cmake-build-debug/
+#After certain version, you can ignore every cmake-build-debug without / at head
+cmake-build-debug/
 /.idea/
 /lib/**
 
