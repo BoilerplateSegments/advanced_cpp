@@ -22,6 +22,28 @@ void TakesString(const std::string& s);
 void TakesStringView(std::string_view s);     // C++17
 */
 
+// Python String splitter
+
+template <typename S>
+void single_char_split(const std::string_view s,char delim, S result){
+
+  // FIXME: C++ Quirk
+  std::istringstream stream(std::string(s), std::ios_base::in);
+
+  std::string item;
+  while (std::getline(stream,item, delim)){
+      *result++ = item;
+    }
+}
+
+std::vector<std::string>
+single_char_split(std::string_view s, char delim){
+  std::vector<std::string> elems;
+  single_char_split (s, delim, std::back_inserter (elems));
+  return elems;
+}
+
+// echo
 void echoStringView(std::string_view s){
   std::cout<<s<<std::endl;
 }
@@ -55,6 +77,12 @@ int main(){
 
   // [[ ABABAB ]]
   std::cout<< shuffleStr("A","B",3)<<std::endl;
+
+  auto SplitedStr= single_char_split ("A:B:C",':');
+
+  // [[ B ]]
+  std::cout<< SplitedStr[1]<<std::endl;
+
 
   std::exit (0);
 }
