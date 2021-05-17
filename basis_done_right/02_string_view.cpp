@@ -43,6 +43,20 @@ single_char_split(std::string_view s, char delim){
   return elems;
 }
 
+// String splitter with space (words)
+
+std::vector<std::string> words_split(const std::string& s)
+{
+  std::stringstream stream (s);
+  std::vector<std::string> words;
+
+  // Basically, it is abuse >> operator
+  for (std::string word; stream >> word;){
+    words.push_back(word);
+  }
+  return words;
+}
+
 // echo
 void echoStringView(std::string_view s){
   std::cout<<s<<std::endl;
@@ -52,7 +66,7 @@ size_t countAlphaBet(std::string_view s,char c)  {
   return std::count(s.begin(),s.end(),c);
 }
 
-// Repeat two string concated
+// Repeat two string contacted
 std::string shuffleStr(std::string_view s1, std::string_view s2, int n){
   std::ostringstream strStream;
   for(int i=0;i<n;i++){
@@ -83,6 +97,9 @@ int main(){
   // [[ B ]]
   std::cout<< SplitedStr[1]<<std::endl;
 
+  auto splitted_word =words_split("This is a sentence!")
+  // [[ sentence! ]]
+  std::cout<<splitted_word[3]<<std::endl;
 
   std::exit (0);
 }
