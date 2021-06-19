@@ -1,8 +1,7 @@
 # Project exclude paths
 #After certain version, you can ignore every cmake-build-debug without / at head
 cmake-build-debug/
-/.idea/
-/lib/**
+.idea/
 
 # For samll project, clang-format only makes you lose freedom!
 **/.clang-format

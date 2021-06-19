@@ -1,4 +1,4 @@
-#include "09_googe_test.h"
+#include "slb_lib.h"
 
 int slb_double(int x){
   return x*x;
