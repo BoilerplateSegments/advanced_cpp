@@ -1,0 +1,6 @@
+file(READ "./example.json" JSN)
+# message(${JSN})
+string(JSON result GET "${JSN}" window)
+message(${result})
+string(JSON result GET "${JSN}" debug)
+message("Debug mode -> ${result}")
