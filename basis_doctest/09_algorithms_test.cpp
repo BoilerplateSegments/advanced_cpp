@@ -3,7 +3,6 @@
 #include "09_algorithms.cpp"
 
 TEST_CASE("testing template -> 00") {
-  CHECK(slbplus(1,2) == 3);
   CHECK(is_palindrome("saippuakivikauppias") == true);
   CHECK(is_palindrome("longest")==false);
   CHECK(simple_accumulate(std::vector<int> {1,2,3}) == 6);

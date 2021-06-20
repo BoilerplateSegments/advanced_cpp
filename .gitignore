@@ -6,4 +6,4 @@ cmake-build-debug/
 # For samll project, clang-format only makes you lose freedom!
 **/.clang-format
 
-/basis_decoupled/doctest.h
+/basis_doctest/doctest.h

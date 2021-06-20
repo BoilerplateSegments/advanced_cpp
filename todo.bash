@@ -2,7 +2,7 @@
 
 set -e #exit when cmd fail
 
-install_ack() {
+install_ag() {
   if [ -f /etc/os-release ]; then
     . /etc/os-release
     case "$ID_LIKE" in
@@ -15,15 +15,18 @@ install_ack() {
     "opensuse suse")
       sudo zypper in the_silver_searcher
       ;;
-    "arch")
-      pacman -S the_silver_searcher
-      ;;
-    *)
-      echo "Unable to determine distro"
-      cat /etc/os-release
-      echo "=========================="
-      exit 1
-      ;;
+    *) # for no sibling OSs
+      case "$ID" in
+      "arch")
+        sudo pacman -S the_silver_searcher
+        ;;
+      *)
+        echo "Unable to determine distro"
+        cat /etc/os-release
+        echo "=========================="
+        exit 1
+        ;;
+      esac ;;
     esac
   else
     echo "Unable to detect distro name"
@@ -31,9 +34,9 @@ install_ack() {
   fi
 }
 
-if ! command -v ack &>/dev/null; then
+if ! command -v ag &>/dev/null; then
   echo "ack auto installing..."
-  install_ack
+  install_ag
 fi
 
 ag --ignore "todo.bash" "TODO|FIXME|SHIT"

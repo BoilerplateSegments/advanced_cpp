@@ -1,10 +1,5 @@
 #include "09_algorithms.h"
 #include <numeric>
-int
-slbplus (int x, int y)
-{
-  return x + y;
-};
 
 bool
 is_palindrome (const std::string_view &s)
@@ -25,7 +20,7 @@ std::string dashed_string(const std::vector<std::string>& s){
   };
 
   return std::accumulate(std::next(s.begin()),
-                          s.end(),
-                          s[0],
-                          dash_fold);
+                         s.end(),
+                         s[0], // init from 1st pos, thus require begin at 2 (std::next)
+                         dash_fold);
 };

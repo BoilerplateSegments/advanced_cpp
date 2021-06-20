@@ -3,7 +3,6 @@
 #include <string_view>
 #include <string>
 #include <vector>
-int slbplus(int x, int y);
 
 // check if a word is same when read backward and forward.
 bool is_palindrome(const std::string_view& s);
