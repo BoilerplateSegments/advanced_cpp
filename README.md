@@ -13,3 +13,14 @@ The code here must follow the [C++ Core Guidelines](https://github.com/isocpp/Cp
 ## Encyclopedia
 
 + <https://www.learncpp.com>
+
+# CRAP
+
+## Windows Garbled
+
++ Set utf-8 for files
++`SetConsoleOutputCP(CP_UTF8)` <https://docs.microsoft.com/en-us/windows/console/setconsoleoutputcp>
+
+if problem persist
++ Clion -> `SHIFT + CTRL + ALT + /` -> Registry -> Disable `run.Processes.with.pty`
++ Set MSVC flag to treat source as utf-8
